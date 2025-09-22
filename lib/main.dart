@@ -1,3 +1,4 @@
+import 'package:barkha_ai/view/report_screen.dart';
 import 'package:barkha_ai/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+      home: ReportScreen(),
     );
   }
 }
