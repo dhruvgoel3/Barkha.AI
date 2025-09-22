@@ -1,3 +1,4 @@
+import 'package:barkha_ai/view/large_card_screen.dart';
 import 'package:barkha_ai/view/report_screen.dart';
 import 'package:barkha_ai/view/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ReportScreen(),
+      home: SplashScreen(),
     );
   }
 }

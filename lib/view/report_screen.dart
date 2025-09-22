@@ -132,15 +132,27 @@ class ReportScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Container(
-                                    height: 6,
+                                    height: 9,
                                     width: 50,
                                     decoration: BoxDecoration(
                                       color: Colors.black,
                                       borderRadius: BorderRadius.circular(3),
                                     ),
                                   ),
+                                  Container(
+                                    height: 9,
+                                    width: 25,
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(3),
+                                    ),
+                                  ),
+                                  
                                   SizedBox(width: 10,),
-                                  Text("68%")
+                                  Text("68%",style: GoogleFonts.inter(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                  ),)
 
                                 ],
                               ),
