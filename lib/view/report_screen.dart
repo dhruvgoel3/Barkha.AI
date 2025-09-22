@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ReportScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF0F2F5),
+      backgroundColor: Color(0xFFDFEDFD),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(16),
@@ -63,11 +64,11 @@ class ReportScreen extends StatelessWidget {
                 padding: EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF4A90E2), Color(0xFF357ABD)],
+                    colors: [Color(0xFF1453F0), Color(0xFF1453F0)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                       color: Color(0xFF4A90E2).withOpacity(0.3),
@@ -79,23 +80,29 @@ class ReportScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Water Management System',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: Text(
+                        'Water Management System',
+                        style: GoogleFonts.inter(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     SizedBox(height: 4),
-                    Text(
-                      'Delhi, India • Block A',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white.withOpacity(0.8),
+                    Padding(
+                      padding: EdgeInsets.only(left: 80),
+                      child: Text(
+                        'Delhi, India • Block A',
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          color: Colors.white.withOpacity(0.8),
+                        ),
                       ),
                     ),
-                    SizedBox(height: 24),
+                    SizedBox(height: 20),
 
                     Row(
                       children: [
@@ -106,7 +113,7 @@ class ReportScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'Current Storage',
-                                style: TextStyle(
+                                style: GoogleFonts.inter(
                                   fontSize: 14,
                                   color: Colors.white.withOpacity(0.8),
                                 ),
@@ -114,8 +121,8 @@ class ReportScreen extends StatelessWidget {
                               SizedBox(height: 8),
                               Text(
                                 '3,420L',
-                                style: TextStyle(
-                                  fontSize: 32,
+                                style: GoogleFonts.inter(
+                                  fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -139,15 +146,6 @@ class ReportScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 8),
-                              Text(
-                                '68%',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
-                              ),
                             ],
                           ),
                         ),
@@ -161,7 +159,7 @@ class ReportScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'Today\'s Collection',
-                                style: TextStyle(
+                                style: GoogleFonts.inter(
                                   fontSize: 14,
                                   color: Colors.white.withOpacity(0.8),
                                 ),
@@ -169,13 +167,13 @@ class ReportScreen extends StatelessWidget {
                               SizedBox(height: 8),
                               Text(
                                 '285L',
-                                style: TextStyle(
-                                  fontSize: 32,
+                                style: GoogleFonts.inter(
+                                  fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
                               ),
-                              SizedBox(height: 16),
+                              SizedBox(height: 5),
                               Row(
                                 children: [
                                   Icon(
@@ -186,7 +184,7 @@ class ReportScreen extends StatelessWidget {
                                   SizedBox(width: 4),
                                   Text(
                                     '+12% vs yesterday',
-                                    style: TextStyle(
+                                    style: GoogleFonts.inter(
                                       fontSize: 12,
                                       color: Colors.white.withOpacity(0.8),
                                     ),
@@ -264,7 +262,7 @@ class ReportScreen extends StatelessWidget {
               // Weekly Overview
               Text(
                 'Weekly Overview',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
@@ -293,7 +291,7 @@ class ReportScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Collection vs Usage',
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: Colors.black87,
@@ -310,7 +308,7 @@ class ReportScreen extends StatelessWidget {
                       child: Center(
                         child: Text(
                           'Chart View',
-                          style: TextStyle(
+                          style: GoogleFonts.inter(
                             color: Colors.grey[600],
                             fontSize: 14,
                           ),
@@ -383,28 +381,28 @@ class ReportScreen extends StatelessWidget {
             ),
             child: Icon(icon, color: iconColor, size: 20),
           ),
-          SizedBox(height: 16),
+          SizedBox(height: 15),
           Text(
             title,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.grey[600],
-              fontWeight: FontWeight.w500,
+            style: GoogleFonts.inter(
+              fontSize: 14,
+              color: Colors.grey,
+              fontWeight: FontWeight.w700,
             ),
           ),
           SizedBox(height: 4),
           Text(
             value,
-            style: TextStyle(
+            style: GoogleFonts.inter(
               fontSize: 20,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w900,
               color: Colors.black87,
             ),
           ),
           SizedBox(height: 4),
           Text(
             subtitle,
-            style: TextStyle(fontSize: 11, color: Colors.grey[500]),
+            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey , fontWeight: FontWeight.w700),
           ),
         ],
       ),
