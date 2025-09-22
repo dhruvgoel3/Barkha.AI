@@ -129,22 +129,20 @@ class ReportScreen extends StatelessWidget {
                               ),
                               SizedBox(height: 12),
                               // Progress bar
-                              Container(
-                                height: 6,
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.3),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                                child: FractionallySizedBox(
-                                  alignment: Alignment.centerLeft,
-                                  widthFactor: 0.68,
-                                  child: Container(
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 6,
+                                    width: 50,
                                     decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(3),
                                     ),
                                   ),
-                                ),
+                                  SizedBox(width: 10,),
+                                  Text("68%")
+
+                                ],
                               ),
                             ],
                           ),
@@ -200,7 +198,7 @@ class ReportScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 24),
+              SizedBox(height: 25),
 
               // Stats grid
               Row(
@@ -325,11 +323,13 @@ class ReportScreen extends StatelessWidget {
         ),
       ),
       // bottomNavigationBar: Container(
+      //   height: 50,
+      //   width: 150,
       //   margin: EdgeInsets.all(20),
       //   padding: EdgeInsets.symmetric(vertical: 12),
       //   decoration: BoxDecoration(
       //     color: Colors.white,
-      //     borderRadius: BorderRadius.circular(25),
+      //     borderRadius: BorderRadius.circular(50),
       //     boxShadow: [
       //       BoxShadow(
       //         color: Colors.black.withOpacity(0.1),
@@ -358,10 +358,10 @@ class ReportScreen extends StatelessWidget {
     required Color iconColor,
   }) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.08),
@@ -402,7 +402,11 @@ class ReportScreen extends StatelessWidget {
           SizedBox(height: 4),
           Text(
             subtitle,
-            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey , fontWeight: FontWeight.w700),
+            style: GoogleFonts.inter(
+              fontSize: 11,
+              color: Colors.grey,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ],
       ),
