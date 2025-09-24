@@ -189,3 +189,4 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
+// Splash screen completed
